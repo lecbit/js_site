@@ -4,6 +4,7 @@ class Products {
         this.classNameActive = "products-element__btn_active";
         this.labelAdd = "Добавить в корзину";
         this.labelRemove = "Удалить из корзины";
+        
     }
 
     handleSetLocationStorage(element, id){
@@ -11,11 +12,11 @@ class Products {
 
         if(pushProduct){
             element.classList.add(this.classNameActive);
-            element.innerHTML = this.labelRemove;
+            element.innerText = this.labelRemove;
         }
         else{
             element.classList.remove(this.classNameActive);
-            element.innerHTML = this.labelAdd;
+            element.innerText = this.labelAdd;
         }
     }
     render(){
@@ -31,7 +32,7 @@ class Products {
             }
             else{
                 activeClass = ' ' + this.classNameActive;
-                activeText = this.laberRemove;
+                activeText = this.labelRemove;
             }
 
             htmlCatalog += `
@@ -43,6 +44,7 @@ class Products {
                 <button class="products-element__btn${activeClass}" onclick="productsPage.handleSetLocationStorage(this, '${id}');">${activeText}</button>
             </li>
             `;
+            console.log(activeText);
         });
 
         const html = `
@@ -50,8 +52,8 @@ class Products {
             ${htmlCatalog}
         </ul>
         `;
-
         ROOT_PRODUCTS.innerHTML = html;
+        
     }
 }
 
