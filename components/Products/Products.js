@@ -18,6 +18,7 @@ class Products {
             element.classList.remove(this.classNameActive);
             element.innerText = this.labelAdd;
         }
+        headerPage.render(products.length);
     }
     render(){
         const productsStore = localStorageUtil.getProducts();
