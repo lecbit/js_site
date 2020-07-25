@@ -12,7 +12,7 @@ class Shopping{
             if(productsStore.indexOf(id) !== -1){
                 htmlCatalog += `
                 <tr>
-                    <td class="shopping-element__name">@${name}</td>
+                    <td class="shopping-element__name">💥${name}</td>
                     <td class="shopping-element__price">${price.toLocaleString()} USD</td>
                 </tr>
                 `;
@@ -26,7 +26,7 @@ class Shopping{
             <table>
                 ${htmlCatalog}
                 <tr>
-                    <td class="shopping-element__name">@Сумма</td>
+                    <td class="shopping-element__name">💶Сумма</td>
                     <td class="shopping-element__price">${sumCatalor.toLocaleString()} USD</td>
                 </tr>
             </table>
